@@ -12,7 +12,7 @@
   let boardState = [];
   let cols = 20;
   let rows = 20;
-  let numMines = 80;
+  let numMines = 50;
   let apparentMinesRemaining = numMines;
   let actualMinesRemaining = numMines;
   let intervalId;
@@ -29,7 +29,7 @@
     };
   }
   function solveBoard() {
-    intervalId = setInterval(suggestMove, 20);
+    intervalId = setInterval(suggestMove, 50);
   }
   function stopSolver() {
     clearInterval(intervalId);
@@ -51,7 +51,7 @@
         //console.log(`coordinates x: ${x}, y: ${y}`);
       }
     } else {
-      console.log("no simple move");
+      alert("no simple move remaining");
       console.log(rules);
       clearInterval(intervalId);
     }

@@ -1,23 +1,24 @@
-const c = require('cassowary');
+const _ = require('lodash');
 
 let rules = [
-  {
-    fields: [1, 2, 3, 5, 7, 8, 9],
-    value: 1,
-  },
-  {
-    fields: [2, 3, 8, 9, 4, 6, 10],
-    value: 3,
-  },
-  {
-    fields: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-    value: 6,
-  },
+  { fields: [364, 365], value: 1 },
+  { fields: [364, 365], value: 1 },
+  { fields: [380, 381], value: 1 },
+  { fields: [364, 365], value: 1 },
+  { fields: [381, 382, 383], value: 1 },
+  { fields: [364, 382, 383], value: 2 },
+  { fields: [364, 365, 383], value: 1 },
+  { fields: [365, 367, 387], value: 1 },
+  { fields: [347, 365, 367, 387], value: 1 },
+  { fields: [347, 364, 365, 367, 380, 381, 382, 383, 387], value: 4 },
 ];
-const solver = new c.SimplexSolver();
 
-let left = new c.Variable('left');
-let mid = new c.Variable('mid');
-let right = new c.Variable('right');
-
-let constraint1 = new c.Equation(mid, new c.Expression());
+let intersections = [];
+let unions = [];
+for (let i = 0; i < rules.length; i++) {
+  intersections.push(rules[i].fields);
+  unions.push(rules[i].fields);
+}
+let actualIntersections = _.intersection(...intersections);
+let actualUnions = _.union([364, 365], [380, 381]);
+console.log(actualUnions);

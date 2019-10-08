@@ -12,7 +12,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "cassowary": "0.0.2",
+    "lodash": "^4.17.15",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
