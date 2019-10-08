@@ -1,0 +1,5 @@
+h1.svelte-1ucbz36{color:purple}
+.game-row.svelte-1cxp91l{display:flex;flex-direction:row;margin:0;padding:0;justify-items:flex-start}.game-col.svelte-1cxp91l{display:flex;flex-direction:column;justify-content:flex-start;margin:0;padding:0}
+.mine.svelte-1qte4k2{background-color:red}.cell.svelte-1qte4k2{width:30px;height:30px;border:1px solid black;text-align:center;line-height:180%}.revealed.svelte-1qte4k2{background-color:rgb(212, 212, 212)}.flagged.svelte-1qte4k2{background-color:rosybrown}
+
+/*# sourceMappingURL=bundle.css.map */
